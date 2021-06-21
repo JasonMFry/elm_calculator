@@ -102,7 +102,7 @@ update msg model =
             init
 
         Digit int ->
-            if String.length model.display >= 10 then
+            if String.length model.display > 10 then
                 model
 
             else
