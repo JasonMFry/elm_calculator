@@ -1,6 +1,6 @@
 #+TITLE: Readme
 
-To run:
+** To Run
 
 #+begin_src shell
 git clone git@github.com:JasonMFry/elm_calculator.git
@@ -17,3 +17,18 @@ elm make src/Main.elm --output=main.js
 #+begin_src shell
 open app.html
 #+end_src
+
+** Caveats
+This solution is in Elm instead of JavaScript. I have previously done this
+challenge using JavaScript so I thought using Elm would be appropriate here. I
+can produce my previous JavaScript solution if we want a good laugh :D
+
+This passes all tests listed in the pdf but does not completely reproduce the
+behavior of the iOS calculator. There are a few errors in the behavior, which I
+have commented in the code.
+
+The doMath function feels a bit sloppy but no better solution immediately came
+to mind.
+
+I would have liked to added tests but I'm unfamiliar with Elm's testing options
+and opted not to spend time figuring it out.
