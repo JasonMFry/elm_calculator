@@ -1,0 +1,19 @@
+#+TITLE: Readme
+
+To run:
+
+#+begin_src shell
+git clone git@github.com:JasonMFry/elm_calculator.git
+#+end_src
+
+#+begin_src shell
+cd elm_calculator
+#+end_src
+
+#+begin_src shell
+elm make src/Main.elm --output=main.js
+#+end_src
+
+#+begin_src shell
+open app.html
+#+end_src
