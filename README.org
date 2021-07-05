@@ -32,3 +32,30 @@ to mind.
 
 I would have liked to added tests but I'm unfamiliar with Elm's testing options
 and opted not to spend time figuring it out.
+** Self Review
+
+*** What I like:
+- I used the type system to reduce Maybes. Using a simple list would result in a
+  LOT of Maybes, but we know more about the data than a list can represent so a
+  record seemed better.
+- Msgs feel good, seems like I got them correct. It's a simple thing but I still
+  like it :)
+- All the weird code (and therefore probably bad code) is isolated in doMath.
+- operatorToMath. And yet I also don't like it b/c the code becomes Polish
+  notation which is probably more confusing to most devs and would be annoying
+  to update or change anything, I would probably forget to use PN half the time.
+
+*** What I don't like:
+- doMath doesn't handle 8 + 3 = ... + 2. I need to use the current display in
+  the calculations since the display can be nonzero.
+- Having to transform the display (which is a string) into a float to do math,
+  which technically could fail and so I have to handle the Maybes. Using a float
+  instead of a string would necessitate adding "decimal" to state, so view can
+  know to display a decimal. This feels a little odd but might be overall
+  better.
+- Instead of defaulting to 0 everywhere that I had to deal with the Nothing case
+  when converting a string to a float, I should display an error but I didn't
+  b/c time constraints.
+- view looks a bit messy, I could extract the top-level divs into separate
+  functions like `div [ class "operation-buttons" ] operationButtons`, etc
+- Nada could be better named.
