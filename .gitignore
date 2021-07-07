@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+# generated file using elm make src/Main.elm --output=main.js
+main.js
